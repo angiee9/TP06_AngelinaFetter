@@ -7,6 +7,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class GameManager : MonoBehaviour
 {
     [SerializeField] private GameObject gameOverScreen;
+    [SerializeField] private GameObject WinScreen;
     public static GameManager Instance { get; private set; }
 
     private void Awake()
@@ -25,6 +26,11 @@ public class GameManager : MonoBehaviour
     public void ShowGameOverScreen()
     {
         gameOverScreen.SetActive(true);
+    }
+
+    public void ShowWinScreen()
+    {
+        WinScreen.SetActive(true);
     }
 
     public void Restart()
